@@ -28,12 +28,18 @@ main .left{
   position: relative;
 }
 
-.left .code, .code pre, .code pre code {
+.left .code, .code pre, .code pre code .editor-wrapper {
   height: 100%;
   width: 100%;
   margin: 0;
-  border-radius: 0.7;
-  background-color: #0c0c0c;
+  border-radius: 0.7rem;
+  overflow: hidden;
+  background-color: #0c0c0c; 
+}
+
+.left .code textarea {
+  border: none !important;
+  outline: none !important;
 }
 
 main .left .review {
