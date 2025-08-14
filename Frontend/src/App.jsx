@@ -3,6 +3,7 @@ import "prismjs/themes/prism-tomorrow.css"
 import Editor from "react-simple-code-editor"
 import prism from "prismjs"
 import axios from "axios"
+import Markdown from "react-markdown"
 import { useState, useEffect } from 'react'
 import './App.css';
 
@@ -43,7 +44,10 @@ const [review, setReview] = useState(``)
         </div>
         <div onClick={reviewCode} className='review'>Review</div>
       </div>
-      <div className='right'>{review}</div>
+      <div className='right'>
+
+        <Markdown>{review}</Markdown>
+      </div>
     </main>
     </>
   )
